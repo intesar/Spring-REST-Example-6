@@ -1,0 +1,22 @@
+---
+parent: "example_v1_hotels"
+name: "example_v1_hotels_post_anonymous_invalid"
+description: "Returns the URL of the new resource in the Location header."
+type: "SUITE"
+endpoint: "/example/v1/hotels"
+method: "POST"
+auth: "NONE"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode == 401"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: null
+severity: null
+inactive: false
+policies: null

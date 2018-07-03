@@ -1,0 +1,23 @@
+---
+parent: "example_v1_hotels"
+name: "example_v1_hotels_get_anonymous_invalid"
+description: "The list is paginated. You can provide a page number (default 0) and\
+  \ a page size (default 100)"
+type: "SUITE"
+endpoint: "/example/v1/hotels"
+method: "GET"
+auth: "NONE"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode == 401"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: null
+severity: null
+inactive: false
+policies: null
