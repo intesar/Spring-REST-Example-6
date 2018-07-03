@@ -1,0 +1,52 @@
+---
+version: '1'
+
+# App (Project) Name
+name: Spring-REST-Example-6
+
+# App description
+description: This is a project for testing the APIs of a Spring REST Hotels app example
+
+# license
+licenses:
+  - APACHE LICENSE, VERSION 2.
+
+imports:
+  # Importing DataSets from Marketplace.
+  '@USName': FXLabs/Common/US-Names
+
+  # SQL Injection Strings
+  '@GenericSQLInjections': FXLabs/Common/Generic-SQLInjections
+  '@OracleSQLInjections': FXLabs/Common/Oracle-SQLInjections
+  '@PostgresSQLInjections': FXLabs/Common/Postgres-SQLInjections
+  '@SQLServerSQLInjections': FXLabs/Common/SQLServer-SQLInjections
+  '@MySQLSQLInjections': FXLabs/Common/MySQL-SQLInjections
+
+  # No-SQL DB Injection String
+  '@MongoDBSQLInjections': FXLabs/Common/MongoDB-SQLInjections
+
+  # Cross-Site Scripting Injection Strings
+  '@XSSSQLInjections': FXLabs/Common/XSS
+
+# App environments
+environments:
+  - name: Dev
+    baseUrl: http://18.144.38.115:8090/example/v1/hotels
+    # app access credentials
+    auths:
+      - name: Default
+        # authType: Basic, OAuth_2_0, Token
+        authType: BASIC
+        username: username@example.com
+        password: mypassword
+# Job profiles
+jobs:
+  - name: Dev
+    environment: Dev
+    tags:
+      - V1
+    regions: FXLabs/US_WEST_1
+    cron: '0 30 * ? * *'
+    issueTracker: FXLabs/GitHub Issues Amjad
+    notifications:
+      - FXLabs/Amjad-Slack
