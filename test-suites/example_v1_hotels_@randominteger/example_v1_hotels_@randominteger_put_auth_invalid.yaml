@@ -1,0 +1,23 @@
+---
+parent: "example_v1_hotels_@randominteger"
+name: "example_v1_hotels_@randominteger_put_auth_invalid"
+description: "You have to provide a valid hotel ID in the URL and in the payload.\
+  \ The ID attribute can not be updated."
+type: "SUITE"
+endpoint: "/example/v1/hotels/{{@RandomInteger}}"
+method: "PUT"
+auth: "INVALID_AUTH"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode == 401"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: null
+severity: null
+inactive: false
+policies: null

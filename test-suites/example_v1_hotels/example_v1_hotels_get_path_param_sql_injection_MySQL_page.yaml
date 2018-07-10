@@ -1,0 +1,31 @@
+---
+parent: "example_v1_hotels"
+name: "example_v1_hotels_get_path_param_sql_injection_MySQL_page"
+description: "The list is paginated. You can provide a page number (default 0) and\
+  \ a page size (default 100)"
+type: "SUITE"
+endpoint: "/example/v1/hotels?page={{@MySQLSQLInjections}}"
+method: "GET"
+auth: "Default"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode != 200"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: "Security_SQL_Injection"
+severity: "Major"
+inactive: false
+policies:
+  initExec: "Request"
+  cleanupExec: "Request"
+  logger: "DEBUG"
+  timeoutSeconds: 300
+  repeatOnFailure: 0
+  repeat: 0
+  repeatModule: "@MySQLSQLInjections"
+  repeatDelay: 0
