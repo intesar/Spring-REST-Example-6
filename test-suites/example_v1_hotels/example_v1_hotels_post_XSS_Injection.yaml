@@ -1,0 +1,26 @@
+---
+parent: "example_v1_hotels"
+name: "example_v1_hotels_post_XSS_Injection"
+description: "Returns the URL of the new resource in the Location header."
+type: "SUITE"
+endpoint: "/example/v1/hotels"
+method: "POST"
+auth: "Default"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases:
+- id: 1
+  body: "{\"city\":\"{{@Random | 8}}\",\"description\":\"{{@XSSSQLInjections}}\",\"\
+    name\":\"{{@Random | 8}}\",\"rating\":null}"
+  inactive: false
+assertions:
+- "@StatusCode == 200"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: null
+severity: null
+inactive: false
+policies: null
