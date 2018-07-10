@@ -1,0 +1,23 @@
+---
+parent: "example_v1_hotels_id"
+name: "example_v1_hotels_id_delete_delete_abstract"
+description: "You have to provide a valid hotel ID in the URL. Once deleted the resource\
+  \ can not be recovered."
+type: "ABSTRACT"
+endpoint: "/example/v1/hotels/{{@example_v1_hotels_post_create_abstract_Response.id}}"
+method: "DELETE"
+auth: ""
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode == 200"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: null
+severity: null
+inactive: false
+policies: null

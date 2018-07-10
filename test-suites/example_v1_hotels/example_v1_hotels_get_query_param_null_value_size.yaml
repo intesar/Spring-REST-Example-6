@@ -1,0 +1,23 @@
+---
+parent: "example_v1_hotels"
+name: "example_v1_hotels_get_query_param_null_value_size"
+description: "The list is paginated. You can provide a page number (default 0) and\
+  \ a page size (default 100)"
+type: "SUITE"
+endpoint: "/example/v1/hotels"
+method: "GET"
+auth: "Default"
+headers:
+- "Accept: application/json"
+- "Content-Type: application/json"
+testCases: []
+assertions:
+- "@StatusCode != 200"
+tags:
+- "V1"
+authors:
+- "FX Bot"
+category: "Bug"
+severity: "Major"
+inactive: false
+policies: null
