@@ -47,6 +47,3 @@ jobs:
       - V1
     regions: FXLabs/US_WEST_1
     cron: '0 30 * ? * *'
-    issueTracker: FXLabs/GitHub Issues Amjad
-    notifications:
-      - FXLabs/Amjad-Slack
