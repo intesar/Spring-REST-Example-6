@@ -13,6 +13,7 @@ headers:
 testCases: []
 assertions:
 - "@StatusCode == 401"
+- "@ResponeTime < 1000"
 tags:
 - "V1"
 authors:
